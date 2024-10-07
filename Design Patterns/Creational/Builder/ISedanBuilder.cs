@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns.Creational.Builder
 {
-    public interface IAutoBuilder
+    public interface ISedanBuilder
     {
         void SetWheelSize();
         void SetWeight();
         void SetPackage();
         void SetDrive();
-        void SetSize();
-        Auto GetAuto();
+        Sedan GetAuto();
     }
 }

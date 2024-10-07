@@ -25,4 +25,11 @@ namespace Design_Patterns.Models.Enums
         Nissan
     }
 
+    public enum CarModel
+    {
+        Rouge,
+        Armada,
+        Jetta
+    }
+
 }

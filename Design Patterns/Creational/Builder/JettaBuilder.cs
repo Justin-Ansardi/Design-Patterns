@@ -10,7 +10,7 @@ namespace Design_Patterns.Creational.Builder
 {
     public class JettaBuilder : IAutoBuilder
     {
-        Sedan jetta = new(); // What happens with memory?
+        Sedan jetta = new(); 
         public Auto GetAuto() => jetta;
 
         public void SetDrive() => jetta.Drive = Drive.Front;

@@ -14,6 +14,7 @@ namespace Design_Patterns.Models
         public string? Package { get; set; }
         public Drive? Drive { get; set; }
         public Manufactorer? Manufactorer { get; set; }
+        public CarModel? CarModel { get; set; }
 
     }
 

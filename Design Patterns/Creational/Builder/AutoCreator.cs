@@ -22,6 +22,6 @@ namespace Design_Patterns.Creational.Builder
             _AutoBuilder.SetWheelSize();
         }
         public Auto GetAuto() => _AutoBuilder.GetAuto();
-        
+
     }
 }
