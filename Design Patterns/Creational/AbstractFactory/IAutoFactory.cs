@@ -1,4 +1,5 @@
-﻿using Design_Patterns.Models;
+﻿using Design_Patterns.Creational.AbstractFactory.AbstractModels;
+using Design_Patterns.Models;
 using Design_Patterns.Models.Enums;
 using System;
 using System.Collections.Generic;
@@ -8,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns.Creational.AbstractFactory
 {
-    public abstract class AutoFactory
+    public interface IAutoFactory
     {
-        public Sedan CreateSedan(CarModel carModel) => new Sedan();
+        //public CreateSedan(CarModel carModel);
 
-        public SUV CreateSUV(CarModel carModel) => new SUV();
+        public ISUV CreateSUV(CarModel carModel);
     }
 }

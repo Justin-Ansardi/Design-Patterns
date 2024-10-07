@@ -1,4 +1,5 @@
-﻿using Design_Patterns.Models.Enums;
+﻿using Design_Patterns.Creational.AbstractFactory.AbstractModels;
+using Design_Patterns.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns.Models
 {
-    public class SUV : Auto
+    public class SUV : Auto , ISUV
     {
         public SUVSize? Size { get; set; }  
 

@@ -1,19 +1,26 @@
 ﻿using Design_Patterns.Creational.AbstractFactory;
+using Design_Patterns.Creational.Builder;
+using Design_Patterns.Models.Enums;
+using System.Runtime.CompilerServices;
 
 namespace Design_Patterns.Clients
 {
     public class AbstractFactoryBuilderHybridThingClient
     {
-        public static void BuildAutoFromAbstractFactory()
+        private IAutoFactory _autoFactory;
+        public AbstractFactoryBuilderHybridThingClient(IAutoFactory autoFactory)
         {
-            var userInput = Models.Enums.CarModel.Rouge;
+            _autoFactory = autoFactory;
+        }
+   
+        public void BuildAutoFromAbstractFactory(CarModel carModel)
+        {
+            var result = this._autoFactory.CreateSUV(carModel);
 
-            AutoFactory autoFactory = new NissanFactory();
-
-            var result = autoFactory.CreateSUV(userInput);
+            result.Manufactorer = Manufactorer.Nissan;
+            result.CarModel = carModel;
 
             Helpers.GenericHelpers.GetAllProperites(result);
-
         }
     }
 }

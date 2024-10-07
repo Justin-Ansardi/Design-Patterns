@@ -1,4 +1,5 @@
-﻿using Design_Patterns.Creational.Builder;
+﻿using Design_Patterns.Creational.AbstractFactory.AbstractModels;
+using Design_Patterns.Creational.Builder;
 using Design_Patterns.Models;
 using Design_Patterns.Models.Enums;
 using System;
@@ -9,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns.Creational.AbstractFactory
 {
-    public class NissanFactory : AutoFactory
+    public class NissanFactory : IAutoFactory
     {
-        public Sedan CreateSedan(CarModel carModel) => throw new NotImplementedException();
-        public SUV CreateSUV(CarModel carModel)
+        public ISUV CreateSedan(CarModel carModel) => throw new NotImplementedException();
+        public ISUV CreateSUV(CarModel carModel) 
         {
             if (carModel == CarModel.Rouge)
             {
